@@ -1,0 +1,51 @@
+html{
+	background-image:url(images/tee2.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100%;
+	font-family:"Comic Sans MS";
+	
+
+}
+.images{
+	
+	width: 23%;
+	height: 450px;
+	transform: rotate(-10deg);
+	margin-top:140px;
+	margin-left: 300px;
+	float: left;
+	background-color: black;
+	border-radius: 100%;
+}
+.textbox{
+	
+	text-align: center;
+	color: white;
+	margin-top: 100px;
+	margin-left:620px;
+	width: 20%;
+	height: 500px;
+	float: right;
+	margin-right: 450px;
+	transform: rotate(5deg);
+	position: absolute;
+
+}
+.textinbox{
+	position: absolute;
+	margin-top: 150px;
+	margin-left: 800px;
+	color: black;
+	text-align: center;
+	font-size: 50px;
+
+}
+.next{
+	font-size:40px;
+	margin-top: 650px;
+	position: absolute;
+	float: right;
+	margin-left: 500px;
+}
