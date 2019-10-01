@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <p>click the button to display the date</p>
+    <button id = "button">the time is?</button>
+    <p id="demo"></p>
+</body>
+<script>
+    var para = document.querySelector("#demo");
+    var button = document.querySelector("#button");
+    function showdate(){
+        para.textContent = Date();
+    }
+    button.addEventListener('click',showdate);
+    
+
+</script>
+</html>

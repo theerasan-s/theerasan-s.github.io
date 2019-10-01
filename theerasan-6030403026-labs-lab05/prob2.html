@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		
+	</title>
+</head>
+<body>
+	<p id = "demo">Display the result here</p>
+	
+</body>
+<script>
+	var person = {firstName:"Manee" , lastName:"Doe" , country:"Thailand"};
+	var para = document.createElement('p');
+	var demo = document.querySelector("#demo");
+    demo.textContent = person.country;
+    para.textContent = "First name is " + person.firstName + " is in " + person.country;
+    document.body.appendChild(para);
+</script>
+</html>

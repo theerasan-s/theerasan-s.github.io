@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<style>
+    .center{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+    .formdiv{
+        padding-left: 30%;
+       
+    }
+    .formsubmit{
+        padding-left: 30%;
+        width: 50%;
+    }
+</style>   
+<head>
+    <div style="align-self: center">
+            <img src="images\nature.png" alt="propic" style="width: 200px;height: 200px;" class="center">
+    </div>
+</head>
+<body>
+    <div style="margin-top: 50px">
+        <form >
+            <div> 
+            <div class="formdiv">
+                    <label for="fname" style="font-size: 20px">First name:</label>
+                    
+                    <p><input id="fname" type="text" style="width:60% ;height:30px ;background-color:lightgray" ;class="fname"></p>
+            </div>
+            <div class="formdiv">
+                    <label for="lname" style="font-size: 20px">Last name:</label>
+                    <p><input id="lname" type="text" style="width:60%;height: 30px;background-color:lightgray" class="lname"></p>
+            </div>
+            <div class="formdiv">
+                    <input type="submit" value="submit" style="height:50px;width:60.3%;background-color: blue ;color: white;border-radius: 0.5em ;font-size: 20px">
+            </div>
+           
+        </form>
+        <p class="caution" style="color: red ;font-size: 20px;margin-top: 20px"></p>
+        </div>
+    </div>
+
+    <script>
+        var form = document.querySelector('form');
+        var fname = document.getElementById('fname');
+        var lname = document.getElementById('lname');
+        var para = document.querySelector(".caution");
+
+        form.onsubmit = function(e){
+            if(fname.value ===""|| lname.value ===""){
+                e.preventDefault();
+                para.textContent = "you need to fill both names!";
+            }
+        }
+    
+    </script>
+
+
+</body>
+</html>

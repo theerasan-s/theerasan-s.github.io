@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<style>
+	p{
+		font-family: 'helvatica neue' , helvatica , sans-serif;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+		text-align: center;
+	
+	}
+</style>
+<head>
+	<title></title>
+	<script>
+		document.addEventListener("DOMContentLoaded" , function() {
+			
+			var num = 0;
+			
+			function createParagraph(){
+				num+=1;
+				var para = document.createElement('p');
+				para.textContent = 'You clicked the button for '+ num;
+				document.body.appendChild(para);
+			}
+			var button = document.querySelectorAll('button');
+			for(var i =0; i<button.length;i++){
+				button[i].addEventListener('click',createParagraph);
+			}
+		});
+		
+		
+	</script>
+</head>
+<body>
+	
+	<button>click me</button>
+
+</body>
+
+</html>

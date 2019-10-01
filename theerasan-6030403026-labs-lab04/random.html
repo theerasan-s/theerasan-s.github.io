@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+</head>
+<style>
+	.showresult{
+		background-color: yellow;
+		padding-left: 5px;
+	}
+	html{
+		font-size: 30px;
+		padding-left: 20px;
+	}
+
+</style>
+<body>
+	<div class="form">
+		<label for="namefield">Enter student name:</label>
+		<input type="text" id="nameField" class="nameField" style="font-size: 30px">
+		<p><label for="english">English</label>
+		<input type="radio" name="language" id="language" value="english" class="language">
+		<label for="thai">Thai</label>
+		<input type="radio" name="language" id="language" value="thai" class="language"></p>
+		<p><input type="submit" value="Generate random words" class="namesubmit" style="font-size: 30px"></p>
+	</div>
+	<div class="result">
+		<p class = "showresult"></p>
+	</div>
+
+</body>
+<script>
+	var namefield = document.querySelector('.nameField');
+	var showresult = document.querySelector('.showresult');
+	var generate = document.querySelector('.namesubmit');
+	var engAdjective = ["handsome","a nice guy","cute","lazy","so smart"];
+	var thaiAdjective = ["คนหล่อ","คนหล่อมาก","คนหล่อได้อีก","คนหล่อเกินไป","พ่อเทพบุตร"];
+	function showname(){
+			var selectLanguage = document.querySelector('.language:checked');
+			var adVal = Math.floor(Math.random()*5);
+			if(namefield.value === ""){
+				showresult.textContent = "Please enter your name";
+				return;
+			}
+			
+			if(selectLanguage.value === "english"){
+				showresult.textContent = namefield.value + " is " + engAdjective[adVal];
+			}
+			if(selectLanguage.value === "thai"){
+				showresult.textContent = namefield.value +" เป็น " + thaiAdjective[adVal];
+			}
+		
+	}
+	generate.addEventListener('click',showname);
+
+
+	
+	
+	
+	
+	
+</script>
+</html>
